@@ -14,7 +14,7 @@ public class HomeController {
     @Autowired
     private BillettRepository rep;
 
-    @PostMapping ("/lagre")
+    @PostMapping ("/lagreBillett")
     public void lagreBillett (Billett innbillett){
         rep.lagreBillett(innbillett);
     }

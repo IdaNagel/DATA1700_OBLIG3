@@ -41,7 +41,7 @@ function registrerBillett(){
         telefonnummer : $("telefonnr").val(),
         epost : $("epost").val(),
     };
-    $.post("/lagre",billett, function (){
+    $.post("/lagreBillett",billett, function (){
         hentAlleBilletter();
     });
 }

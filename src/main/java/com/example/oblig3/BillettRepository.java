@@ -13,9 +13,9 @@ public class BillettRepository {
     @Autowired
     private JdbcTemplate db;
 
-    public void lagreBillett(Billett innBillet){
+    public void lagreBillett(Billett b){
         String sql = "INSERT INTO Billett (film, antall, fornavn, etternavn, telefonnr, epost) VALUES (?,?,?,?,?,?)";
-        db.update(sql,innBillet.getFilm(),innBillet.getAntall(),innBillet.getFornavn(),innBillet.getEtternavn(),innBillet.getTelefonnummer(),innBillet.getEpost());
+        db.update(sql,b.getFilm(),b.getAntall(),b.getFornavn(),b.getEtternavn(),b.getTelefonnummer(),b.getEpost());
     }
 
     public List<Billett> hentAlleBilletter(){
