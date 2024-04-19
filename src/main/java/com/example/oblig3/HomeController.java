@@ -1,18 +1,18 @@
-package oblig3;
+package com.example.oblig3;
 
+import com.example.oblig3.BillettRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
 import java.util.List;
+
 
 @RestController
 public class HomeController {
 
     @Autowired
-    private oblig3.BillettRepository rep;
+    private BillettRepository rep;
 
     @PostMapping ("/lagre")
     public void lagreBillett (Billett innbillett){

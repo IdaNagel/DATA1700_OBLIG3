@@ -1,4 +1,6 @@
- public class Billett {
+package com.example.oblig3;
+
+public class Billett {
         private int id;
         private String film;
         private int antall;
